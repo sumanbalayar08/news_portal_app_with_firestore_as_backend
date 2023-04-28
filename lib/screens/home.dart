@@ -40,8 +40,10 @@ class _HomeScreenState extends State<HomeScreen> {
                   style: TextStyle(fontSize: 20, color: Colors.white),
                 ),
                 onTap: () {
-                  Navigator.of(context).pop();
-                },
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => NewsDashboard(text:"International")),
+                  );                },
                 leading: Icon(
                   Icons.newspaper,
                   color: Colors.white,
@@ -53,8 +55,10 @@ class _HomeScreenState extends State<HomeScreen> {
                   style: TextStyle(fontSize: 20, color: Colors.white),
                 ),
                 onTap: () {
-                  Navigator.of(context).pop();
-                },
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => NewsDashboard(text:"Sports")),
+                  );                },
                 leading: Icon(
                   Icons.sports_baseball,
                   color: Colors.white,
@@ -66,8 +70,10 @@ class _HomeScreenState extends State<HomeScreen> {
                   style: TextStyle(fontSize: 20, color: Colors.white),
                 ),
                 onTap: () {
-                  Navigator.of(context).pop();
-                },
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => NewsDashboard(text:"National")),
+                  );                },
                 leading: Icon(
                   Icons.local_activity,
                   color: Colors.white,
@@ -79,8 +85,10 @@ class _HomeScreenState extends State<HomeScreen> {
                   style: TextStyle(fontSize: 20, color: Colors.white),
                 ),
                 onTap: () {
-                  Navigator.of(context).pop();
-                },
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => NewsDashboard(text:"Political")),
+                  );                },
                 leading: Icon(
                   Icons.groups_sharp,
                   color: Colors.white,
