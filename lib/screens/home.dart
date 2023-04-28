@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:carousel_nullsafety/carousel_nullsafety.dart';
-
+import 'NewsDashboard.dart';
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
 
@@ -11,6 +11,9 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
+    final ButtonStyle style =
+    ElevatedButton.styleFrom(backgroundColor: Color(0xFF222240),textStyle: const TextStyle(fontSize: 20));
+
     return Scaffold(
       appBar: AppBar(
         title: Text("News Portal"),
@@ -91,11 +94,12 @@ class _HomeScreenState extends State<HomeScreen> {
       body: ListView(
         children: <Widget>[
         Container(
-          height: 200.0,
+          height: 230.0,
           margin: EdgeInsets.all(5.0),
           child: Column(
             children: <Widget>[
               Container(
+                margin: EdgeInsets.all(10.0),
                 child: Text(
                   "Latest News",
                   style: TextStyle(fontSize: 18.0, color: Colors.white),
@@ -103,7 +107,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
               ),
               SizedBox(height: 6.0),
-              
+
               Container(
                 height: 170.0,
                 color:Color(0xFF272B4A),
@@ -238,9 +242,81 @@ class _HomeScreenState extends State<HomeScreen> {
                 indicatorBgPadding: 5.0,
                 borderRadius: true,
               )
-           
+
           ),
-      ],
+          Container(
+            child: Column(
+              children: <Widget>[
+                Container(
+                  child: Row(
+                    children: <Widget>[
+                      Expanded(
+                        child: ElevatedButton(
+                          style: style,
+                          onPressed: () {
+                            //To print the data of a asynchronous function that returns the future use await keyword, to
+                            //Store the data temporarily and then finally print it
+                            //List data = await display();
+                            //print(data);
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(builder: (context) => NewsDashboard(text:"International")),
+                            );
+                            },
+                          child: const Text('International'),
+                        ),
+                      ),
+                      SizedBox(width: 2.0,),
+                      Expanded(
+                        child: ElevatedButton(
+                          style: style,
+                          onPressed: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(builder: (context) => NewsDashboard(text:"Political")),
+                            );
+                          },
+                          child: const Text('Political'),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                SizedBox(height: 4.0,),
+                Container(
+                  child: Row(
+                    children: <Widget>[
+                      Expanded(child:
+                      ElevatedButton(
+                        style: style,
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(builder: (context) => NewsDashboard(text:"National")),
+                          );
+                        },
+                        child: const Text('National'),
+                      ),),
+                      SizedBox(width: 2.0,),
+                      Expanded(
+                        child: ElevatedButton(
+                          style: style,
+                          onPressed: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(builder: (context) => NewsDashboard(text:"Sports")),
+                            );
+                          },
+                          child: const Text('Sports'),
+                        ),
+                      ),
+                    ],
+                  ),
+                )
+              ],
+            ),
+          )
+          ],
       ),
     );
   }

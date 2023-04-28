@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:news_portal_app_with_firestore_as_backend/screens/home.dart';
-import 'package:news_portal_app_with_firestore_as_backend/screens/splash.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  print('Firebase initialization successful!');
   await Firebase.initializeApp();
+  print('Firebase initialization successful!');
   runApp(const MyApp());
 }
 

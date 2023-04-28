@@ -1,33 +1,33 @@
 {
   "project_info": {
-    "project_number": "1009089953322",
-    "project_id": "newsapp-38230",
-    "storage_bucket": "newsapp-38230.appspot.com"
+    "project_number": "750540301227",
+    "project_id": "chatapp-8caf7",
+    "storage_bucket": "chatapp-8caf7.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:1009089953322:android:283645c46b9e2a70e2cd53",
+        "mobilesdk_app_id": "1:750540301227:android:307b9e07985f23426fa8ee",
         "android_client_info": {
           "package_name": "com.example.news_portal_app_with_firestore_as_backend"
         }
       },
       "oauth_client": [
         {
-          "client_id": "1009089953322-mtbhf1lavv35o4ek5nimns327ug6a93r.apps.googleusercontent.com",
+          "client_id": "750540301227-00ochohbco0bhcnhvr70bafgk00goggs.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyA2QQWvPprMKb2TZzJbV4aDZeExv6QgKyo"
+          "current_key": "AIzaSyD9eKjLVF1uq19ytPIfWbUKPlnz_wsKkKA"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "1009089953322-mtbhf1lavv35o4ek5nimns327ug6a93r.apps.googleusercontent.com",
+              "client_id": "750540301227-00ochohbco0bhcnhvr70bafgk00goggs.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
